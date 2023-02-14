@@ -4,7 +4,9 @@ namespace Coding_test.Services
 {
     public interface IUserDetailsService
     {
-        void AddData(UserDetail UserData);
+       void AddData(UserDetail UserData);
+        dynamic GetData();
+
         
     }
 }

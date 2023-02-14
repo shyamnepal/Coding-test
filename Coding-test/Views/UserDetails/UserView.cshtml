@@ -1,0 +1,78 @@
+﻿@model IEnumerable<UserDetail>
+
+@{
+    ViewData["Title"] = "User Data";
+}
+
+<h1>User Details</h1>
+<p class="float-end"> 
+    <a asp-action="Index" class="btn btn-primary">Add User</a>
+
+</p>
+
+        <table class="table align-middle mb-0 bg-white"> 
+
+             <thead class="bg-light">
+                  <tr>
+                   <th>@Html.DisplayNameFor(model=> model.Name)</th>
+                    <th>@Html.DisplayNameFor(model=> model.Gender)</th>
+                     <th>@Html.DisplayNameFor(model=> model.Phone)</th>
+                      <th>@Html.DisplayNameFor(model=> model.Email)</th>
+                        <th>@Html.DisplayNameFor(model=> model.Address)</th>
+                          <th>@Html.DisplayNameFor(model=> model.Nationality)</th>
+                            <th>@Html.DisplayNameFor(model=> model.DateOfBirth)</th>
+                              <th>@Html.DisplayNameFor(model=> model.EducationBackground)</th>
+                                <th>@Html.DisplayNameFor(model=> model.PreferredModeOfContact)</th>
+
+
+               </tr>
+
+
+            </thead>
+
+            <tbody>
+        @foreach (var item in Model)
+        {
+                            <tr>
+                                     <td class=" align-middle"> 
+                    @Html.DisplayFor(modelItem=> item.Name)
+                                         </td>
+
+                                    <td class=" align-middle"> 
+                    @Html.DisplayFor(modelItem=> item.Gender)
+                                     </td>
+
+                                    <td class=" align-middle"> 
+                    @Html.DisplayFor(modelItem=> item.Phone)
+                                        </td>
+
+                                         <td class=" align-middle"> 
+                    @Html.DisplayFor(modelItem=> item.Email)
+                                             </td>
+
+                                        <td class=" align-middle"> 
+                    @Html.DisplayFor(modelItem=> item.Address)
+                                         </td>
+
+                                        <td class=" align-middle"> 
+                    @Html.DisplayFor(modelItem=> item.Nationality)
+                                            </td>
+
+
+                                        <td class=" align-middle"> 
+                    @Html.DisplayFor(modelItem=> item.DateOfBirth)
+                                             </td>
+
+                                        <td class=" align-middle"> 
+                    @Html.DisplayFor(modelItem=> item.EducationBackground)
+                                         </td>
+
+                                        <td class=" align-middle"> 
+                    @Html.DisplayFor(modelItem=> item.PreferredModeOfContact)
+                                            </td>
+                                </tr>
+        }
+
+            </tbody>
+        </table>
+

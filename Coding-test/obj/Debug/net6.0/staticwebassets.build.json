@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4kl2IsAh6KT9ZciRObGGUtCMjr5KuvWnAK4G1rl3It4=",
+  "Hash": "l+w82Uo4JFpWEHwMi7jIjptKj9CqkkSmObHBnJYXzDk=",
   "Source": "Coding-test",
   "BasePath": "_content/Coding-test",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\uploads\\Output.csv",
+      "SourceId": "Coding-test",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\",
+      "BasePath": "_content/Coding-test",
+      "RelativePath": "uploads/Output.csv",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Output.csv"
     }
   ]
 }

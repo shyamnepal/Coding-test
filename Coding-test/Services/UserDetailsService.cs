@@ -8,7 +8,6 @@ namespace Coding_test.Services
         public  IWebHostEnvironment _environment;
         public UserDetailsService(IWebHostEnvironment environment)
         {
-
             _environment = environment;
         }
         public void AddData(UserDetail UserData)
@@ -48,15 +47,65 @@ namespace Coding_test.Services
                     output.AppendLine(string.Join(separator, newLinew));
 
                     File.AppendAllText(file, output.ToString());
-                }
+                } 
                 
-                  
+            } catch (Exception ex)
 
-            }
-            catch (Exception ex)
             {
                 throw ex;
             }
+
+
+        }
+
+        //This method is to get the data from csv file 
+        //and give the data to the controller class
+
+        public dynamic GetData()
+        {
+            try
+            {
+                //path of our csv file 
+                var csvpath = _environment.WebRootPath + "\\uploads\\Output.csv";
+                List<UserDetail> Values = File.ReadAllLines(csvpath)
+                    .Skip(1)
+                    .Select(v => FromCsv(v))
+                    .ToList();
+
+                return Values;
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
+
+            
+        }
+
+        // create a Methods that return UserDetail 
+        //each value are assign to the UserDetails model UserDetails objects
+        UserDetail FromCsv(string csvLine)
+        {
+            try
+            {
+                string[] values = csvLine.Split(',');
+                UserDetail dailyValues = new UserDetail();
+                dailyValues.Name = Convert.ToString(values[0]);
+                dailyValues.Gender = Convert.ToString(values[1]);
+                dailyValues.Phone = Convert.ToString(values[2]);
+                dailyValues.Email = Convert.ToString(values[3]);
+                dailyValues.Address = Convert.ToString(values[4]);
+                dailyValues.Nationality = Convert.ToString(values[5]);
+                dailyValues.DateOfBirth = Convert.ToDateTime(values[6]);
+                dailyValues.EducationBackground = Convert.ToString(values[7]);
+                dailyValues.PreferredModeOfContact = Convert.ToString(values[8]);
+
+                return dailyValues;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
         }
     }
 }
