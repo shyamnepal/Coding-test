@@ -61,7 +61,7 @@ namespace Coding_test.Services
         //This method is to get the data from csv file 
         //and give the data to the controller class
 
-        public dynamic GetData()
+        public IEnumerable<UserDetail> GetData()
         {
             try
             {

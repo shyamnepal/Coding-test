@@ -1,0 +1,15 @@
+D:\Core_C#\Coding-test\CodingUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Core_C#\Coding-test\CodingUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Core_C#\Coding-test\CodingUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Core_C#\Coding-test\CodingUnitTest\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+D:\Core_C#\Coding-test\CodingUnitTest\bin\Debug\CodingUnitTest.dll
+D:\Core_C#\Coding-test\CodingUnitTest\bin\Debug\CodingUnitTest.pdb
+D:\Core_C#\Coding-test\CodingUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Core_C#\Coding-test\CodingUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Core_C#\Coding-test\CodingUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Core_C#\Coding-test\CodingUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Core_C#\Coding-test\CodingUnitTest\obj\Debug\CodingUnitTest.csproj.AssemblyReference.cache
+D:\Core_C#\Coding-test\CodingUnitTest\obj\Debug\CodingUnitTest.csproj.CoreCompileInputs.cache
+D:\Core_C#\Coding-test\CodingUnitTest\obj\Debug\CodingUnitTest.csproj.CopyComplete
+D:\Core_C#\Coding-test\CodingUnitTest\obj\Debug\CodingUnitTest.dll
+D:\Core_C#\Coding-test\CodingUnitTest\obj\Debug\CodingUnitTest.pdb
