@@ -33,7 +33,7 @@ namespace Coding_test.Controllers
             //the csv file implementation in UserDetailsService class which implements IUserService interface
 
             _service.AddData(UserData);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(UserView));
         }
 
         //This method is to get the data from csv file
@@ -43,8 +43,6 @@ namespace Coding_test.Controllers
             var data = _service.GetData();
             return View(data);
         }
-
-        
 
         
     }

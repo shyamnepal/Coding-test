@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\Coding-test.bundle.scp.css"
     },
     {
+      "Id": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\css\\CustomStyle.css",
+      "PackagePath": "staticwebassets\\css\\CustomStyle.css"
+    },
+    {
       "Id": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\js\\clientValidation.js",
+      "PackagePath": "staticwebassets\\js\\clientValidation.js"
     },
     {
       "Id": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\js\\site.js",

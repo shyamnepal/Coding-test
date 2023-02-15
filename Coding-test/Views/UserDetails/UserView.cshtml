@@ -4,15 +4,15 @@
     ViewData["Title"] = "User Data";
 }
 
-<h1>User Details</h1>
+<h1 style="color: white; text-align: center;">User Details</h1>
 <p class="float-end"> 
     <a asp-action="Index" class="btn btn-primary">Add User</a>
 
 </p>
+   <div class="container-fluid">
+        <table class="table align-middle mb-0 bg-white  table-striped container-fluid"> 
 
-        <table class="table align-middle mb-0 bg-white"> 
-
-             <thead class="bg-light">
+             <thead class="bg-light table-dark">
                   <tr>
                    <th>@Html.DisplayNameFor(model=> model.Name)</th>
                     <th>@Html.DisplayNameFor(model=> model.Gender)</th>
@@ -31,48 +31,48 @@
             </thead>
 
             <tbody>
-        @foreach (var item in Model)
-        {
+            @foreach (var item in Model)
+            {
                             <tr>
                                      <td class=" align-middle"> 
-                    @Html.DisplayFor(modelItem=> item.Name)
+                        @Html.DisplayFor(modelItem=> item.Name)
                                          </td>
 
                                     <td class=" align-middle"> 
-                    @Html.DisplayFor(modelItem=> item.Gender)
+                        @Html.DisplayFor(modelItem=> item.Gender)
                                      </td>
 
                                     <td class=" align-middle"> 
-                    @Html.DisplayFor(modelItem=> item.Phone)
+                        @Html.DisplayFor(modelItem=> item.Phone)
                                         </td>
 
                                          <td class=" align-middle"> 
-                    @Html.DisplayFor(modelItem=> item.Email)
+                        @Html.DisplayFor(modelItem=> item.Email)
                                              </td>
 
                                         <td class=" align-middle"> 
-                    @Html.DisplayFor(modelItem=> item.Address)
+                        @Html.DisplayFor(modelItem=> item.Address)
                                          </td>
 
                                         <td class=" align-middle"> 
-                    @Html.DisplayFor(modelItem=> item.Nationality)
+                        @Html.DisplayFor(modelItem=> item.Nationality)
                                             </td>
 
 
                                         <td class=" align-middle"> 
-                    @Html.DisplayFor(modelItem=> item.DateOfBirth)
+                        @Html.DisplayFor(modelItem=> item.DateOfBirth)
                                              </td>
 
                                         <td class=" align-middle"> 
-                    @Html.DisplayFor(modelItem=> item.EducationBackground)
+                        @Html.DisplayFor(modelItem=> item.EducationBackground)
                                          </td>
 
                                         <td class=" align-middle"> 
-                    @Html.DisplayFor(modelItem=> item.PreferredModeOfContact)
+                        @Html.DisplayFor(modelItem=> item.PreferredModeOfContact)
                                             </td>
                                 </tr>
-        }
+            }
 
             </tbody>
         </table>
-
+   </div>

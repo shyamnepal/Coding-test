@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l+w82Uo4JFpWEHwMi7jIjptKj9CqkkSmObHBnJYXzDk=",
+  "Hash": "tOj/Lxoj3AskGnD0Vr6WsqEJ/CWb48hLAOXBH+rwxso=",
   "Source": "Coding-test",
   "BasePath": "_content/Coding-test",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "D:\\Core_C#\\Coding-test\\Coding-test\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Coding-test.bundle.scp.css"
     },
     {
+      "Identity": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\css\\CustomStyle.css",
+      "SourceId": "Coding-test",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\",
+      "BasePath": "_content/Coding-test",
+      "RelativePath": "css/CustomStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CustomStyle.css"
+    },
+    {
       "Identity": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\css\\site.css",
       "SourceId": "Coding-test",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\js\\clientValidation.js",
+      "SourceId": "Coding-test",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\",
+      "BasePath": "_content/Coding-test",
+      "RelativePath": "js/clientValidation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\clientValidation.js"
     },
     {
       "Identity": "D:\\Core_C#\\Coding-test\\Coding-test\\wwwroot\\js\\site.js",

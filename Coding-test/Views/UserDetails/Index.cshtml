@@ -1,98 +1,94 @@
 ﻿@model UserDetail
 
 @{
-    ViewData["Title"] = "AddAsync a new Actor";
+    ViewData["Title"] = "Add a new User ";
 }
 
-<div class="row text"> 
-    <div class="col-md-8 offset-2">
-        <p>
-            <h1>Add a New Actor </h1>
-        </p>
-        <div class="row"> 
-            <div class="col-md-8 offset-2">
-                <form asp-action="Create">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 
-                <div class="form-group">
-                    <label asp-for="Name" class="control-label"> </label>
-                    <input asp-for="Name" class="form-control" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-
-                <br />
-
-                <div class="form-group">
-                    <label asp-for="Gender" class="control-label"> </label>
-                    <input asp-for="Gender" class="form-control" />
-                    <span asp-validation-for="Gender" class="text-danger"></span>
-                </div>
-
-                  <br />
-
-                <div class="form-group">
-                    <label asp-for="Phone" class="control-label"> </label>
-                    <input asp-for="Phone" class="form-control" />
-                    <span asp-validation-for="Phone" class="text-danger"></span>
-                </div>
-
-                  <br />
-
-                 <div class="form-group">
-                    <label asp-for="Email" class="control-label"> </label>
-                    <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-
-                  <br />
-
-                 <div class="form-group">
-                    <label asp-for="Address" class="control-label"> </label>
-                    <input asp-for="Address" class="form-control" />
-                    <span asp-validation-for="Address" class="text-danger"></span>
-                </div>
-
-                  <br />
-
-                 <div class="form-group">
-                    <label asp-for="Nationality" class="control-label"> </label>
-                    <input asp-for="Nationality" class="form-control" />
-                    <span asp-validation-for="Nationality" class="text-danger"></span>
-                </div>
-
-                  <br />
-
-                 <div class="form-group">
-                    <label asp-for="DateOfBirth" class="control-label"> </label>
-                    <input asp-for="DateOfBirth" class="form-control" />
-                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
-                </div>
-
-                  <br />
-
-                <div class="form-group">
-                    <label asp-for="EducationBackground" class="control-label"> </label>
-                    <input asp-for="EducationBackground" class="form-control" />
-                    <span asp-validation-for="EducationBackground" class="text-danger"></span>
-                </div>
-
-              <div class="form-group">
-                    <label asp-for="PreferredModeOfContact" class="control-label"> </label>
-                    <input asp-for="PreferredModeOfContact" class="form-control" />
-                    <span asp-validation-for="PreferredModeOfContact" class="text-danger"></span>
-                </div>
-
-                  <br />
-
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn-outline-success float-right"  />
-                    <a class="btn btn-outline-secondary "  asp-action="UserView">show All</a>
-                </div>
-             </form>
-
-                </div>
-        </div>
+<div class="container">
+    <form id="form" asp-action="Create">
+    <h1>Add User Details</h1>
+    <div class="input-control">
+        <label asp-for="Name" >Name</label>
+        <input asp-for="Name" id="name" type="text"/>
+        <div class="error"></div>
     </div>
-</div>
 
+    <br />
+    
+    <label>
+                <input type="radio" value="Male" name="gender" id="Male" />
+                <span>Male</span>
+                 
+            </label>
+            <label>
+                <div>
+                <input type="radio" value="Female" name="gender" id="Female"/>
+                <span>Female</span>
+                 <div class="error" style="color: #ff3860;  font-size: 13px;  height: 20px; font-weight: 400" ></div>
+                </div>
+                
+                
+            </label>
+
+
+            
+    <div class="input-control">
+        <label  asp-for="Phone" >Phone</label>
+        <input asp-for="Phone" id="phone" type="text"/>
+        <div class="error"></div>
+    </div>
+
+    <div class="input-control">
+        <label  asp-for="Email" >Email</label>
+        <input asp-for="Email" id="email" type="text"/>
+        <div class="error"></div>
+    </div>
+
+
+
+    <div class="input-control">
+        <label asp-for="Address">Address</label>
+        <input asp-for="Address" id="address" type="text"/>
+        <div class="error"></div>
+    </div>
+
+    <div class="input-control">
+        <label asp-for="Nationality">Nationality</label>
+        <input  asp-for="Nationality" id="nationality" type="text"/>
+        <div class="error"></div>
+    </div>
+
+    <div class="input-control">
+        <label asp-for="DateOfBirth">Date of Birth</label>
+        <input  asp-for="DateOfBirth" id="dateofBirth" type="date" name="dateofBirth" />
+        <div class="error"></div>
+    </div>
+
+
+    <div class="input-control">
+        <label asp-for="EducationBackground">Education Background</label>
+        <input asp-for="EducationBackground" id="educationBackground"  type="text"/>
+        <div class="error"></div>
+    </div>
+
+
+        <label asp-for="PreferredModeOfContact">Prefered Mode of Contact</label>
+        <div class="input-control">
+             <select class="" asp-for="PreferredModeOfContact" id="contact">
+            <option value="">Please select</option>
+            <option value="none">None</option>
+          <option value="phone">Phone</option>
+          <option value="mail">Mail</option>
+        </select>
+       <div class="error" ></div>
+    </div>
+
+
+
+
+
+     <button type="submit" asp-action="Create">Submit</button>
+    </form>
+</div>
