@@ -15,7 +15,7 @@ namespace Coding_test.Controllers
         // return Index page
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         //http post request
