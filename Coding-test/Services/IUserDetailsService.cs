@@ -7,6 +7,6 @@ namespace Coding_test.Services
        void AddData(UserDetail UserData);
         IEnumerable<UserDetail> GetData();
 
-        
+        dynamic GetUserById(int id);
     }
 }

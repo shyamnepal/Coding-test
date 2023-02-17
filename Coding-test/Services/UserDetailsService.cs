@@ -33,17 +33,20 @@ namespace Coding_test.Services
 
                 if (!File.Exists(file))
                 {
-                    string[] headings = { "Name", "Gender", "phone", "Email", "Address", "Nationality", "Date of Birth", "Education Background", "Prefered Contact" };
+                    string[] headings = {"Id","Name", "Gender", "phone", "Email", "Address", "Nationality", "Date of Birth", "Education Background", "Prefered Contact" };
                     output.AppendLine(string.Join(separator, headings));
-
-                    string[] newLine = { UserData.Name, UserData.Gender, UserData.Phone, UserData.Email, UserData.Address, UserData.Nationality, UserData.DateOfBirth.ToString(), UserData.EducationBackground, UserData.PreferredModeOfContact };
+                    int count = 1;
+                    string[] newLine = {count.ToString(), UserData.Name, UserData.Gender, UserData.Phone, UserData.Email, UserData.Address, UserData.Nationality, UserData.DateOfBirth.ToString(), UserData.EducationBackground, UserData.PreferredModeOfContact };
                     output.AppendLine(string.Join(separator, newLine));
 
                     File.AppendAllText(file, output.ToString());
                 }
                 else
                 {
-                    string[] newLinew = { UserData.Name, UserData.Gender, UserData.Phone, UserData.Email, UserData.Address, UserData.Nationality, UserData.DateOfBirth.ToString(), UserData.EducationBackground, UserData.PreferredModeOfContact };
+                    var lines = File.ReadAllLines(file);
+                    var count = lines.Length;
+
+                    string[] newLinew = {count.ToString(), UserData.Name, UserData.Gender, UserData.Phone, UserData.Email, UserData.Address, UserData.Nationality, UserData.DateOfBirth.ToString(), UserData.EducationBackground, UserData.PreferredModeOfContact };
                     output.AppendLine(string.Join(separator, newLinew));
 
                     File.AppendAllText(file, output.ToString());
@@ -81,6 +84,29 @@ namespace Coding_test.Services
             
         }
 
+        
+
+        public dynamic GetUserById(int id)
+        {
+            try
+            {
+                //path of our csv file 
+                var csvpath = _environment.WebRootPath + "\\uploads\\Output.csv";
+                List<UserDetail> Values = File.ReadAllLines(csvpath)
+                    .Skip(1)
+                    .Select(v => FromCsv(v))
+                    .ToList();
+                var user = Values.Where(x => x.Id == id).FirstOrDefault();
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+       
+
         // create a Methods that return UserDetail 
         //each value are assign to the UserDetails model and return UserDetails objects
         UserDetail FromCsv(string csvLine)
@@ -89,15 +115,16 @@ namespace Coding_test.Services
             {
                 string[] values = csvLine.Split(',');
                 UserDetail dailyValues = new UserDetail();
-                dailyValues.Name = Convert.ToString(values[0]);
-                dailyValues.Gender = Convert.ToString(values[1]);
-                dailyValues.Phone = Convert.ToString(values[2]);
-                dailyValues.Email = Convert.ToString(values[3]);
-                dailyValues.Address = Convert.ToString(values[4]);
-                dailyValues.Nationality = Convert.ToString(values[5]);
-                dailyValues.DateOfBirth = Convert.ToDateTime(values[6]);
-                dailyValues.EducationBackground = Convert.ToString(values[7]);
-                dailyValues.PreferredModeOfContact = Convert.ToString(values[8]);
+                dailyValues.Id = Convert.ToInt32(values[0]);
+                dailyValues.Name = Convert.ToString(values[1]);
+                dailyValues.Gender = Convert.ToString(values[2]);
+                dailyValues.Phone = Convert.ToString(values[3]);
+                dailyValues.Email = Convert.ToString(values[4]);
+                dailyValues.Address = Convert.ToString(values[5]);
+                dailyValues.Nationality = Convert.ToString(values[6]);
+                dailyValues.DateOfBirth = Convert.ToDateTime(values[7]);
+                dailyValues.EducationBackground = Convert.ToString(values[8]);
+                dailyValues.PreferredModeOfContact = Convert.ToString(values[9]);
 
                 return dailyValues;
             }

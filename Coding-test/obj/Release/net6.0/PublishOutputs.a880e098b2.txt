@@ -1,0 +1,7 @@
+D:\Core_C#\Coding-test\Coding-test\obj\Release\net6.0\PubTmp\Out\Coding-test.exe
+D:\Core_C#\Coding-test\Coding-test\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\Core_C#\Coding-test\Coding-test\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\Core_C#\Coding-test\Coding-test\obj\Release\net6.0\PubTmp\Out\Coding-test.dll
+D:\Core_C#\Coding-test\Coding-test\obj\Release\net6.0\PubTmp\Out\Coding-test.deps.json
+D:\Core_C#\Coding-test\Coding-test\obj\Release\net6.0\PubTmp\Out\Coding-test.runtimeconfig.json
+D:\Core_C#\Coding-test\Coding-test\obj\Release\net6.0\PubTmp\Out\Coding-test.pdb

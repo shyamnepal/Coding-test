@@ -44,6 +44,13 @@ namespace Coding_test.Controllers
             return View(data);
         }
 
+        //This method is to get the Details of the particular user by id
+        public async Task<IActionResult> Details(int id)
+        {
+            var GetById = _service.GetUserById(id);
+            return View(GetById);
+        }
+
         
     }
 }

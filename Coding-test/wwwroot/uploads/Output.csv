@@ -1,2 +1,6 @@
-Name,Gender,phone,Email,Address,Nationality,Date of Birth,Education Background,Prefered Contact
-Shyam Sundar Nepal,Male,9843117125,shyamenpal595@gmail.com,Kathmandu,American,7/21/2000 12:00:00 AM,Bachelor Computing ,phone
+Id,Name,Gender,phone,Email,Address,Nationality,Date of Birth,Education Background,Prefered Contact
+1,shyam nepal,Male,9843117125,shyamenpal595@gmail.com,ktm,Nepali,2/7/2023 12:00:00 AM,CSIT,none
+2,shyam nepal,Female,9843117125,shyamenpal595@gmail.com,ktm,Nepali,2/7/2023 12:00:00 AM,CSIT,none
+3,shyam nepal,Female,9843117125,shyamenpal595@gmail.com,ktm,Nepali,2/7/2023 12:00:00 AM,CSIT,none
+4,shyam nepal,Female,9843117125,shyamenpal595@gmail.com,ktm,Nepali,2/7/2023 12:00:00 AM,CSIT,none
+5,testing,Male,0987654323,newemail@gmail.com,newAddress,Indian,2/1/2023 12:00:00 AM,Arts,mail

@@ -22,9 +22,12 @@ namespace TestProject
         [Fact]
         public void TestIndexView()
         {
-            //Act
+            //Arrange
             var result = _controller.Index() as ViewResult;
+            //Act
             var ViewResult = Assert.IsType<ViewResult>(result);
+
+            //Assert
             Assert.Equal("Index", ViewResult.ViewName);
 
         }
@@ -32,8 +35,10 @@ namespace TestProject
         public async Task Get_OnSucess_ReturnsListOfUsers()
         {
 
-            // Act
+            // Arrange
             var result = _controller.UserView().Result;
+
+            //Act
             var okResult = result as OkObjectResult;
             
             // Assert
