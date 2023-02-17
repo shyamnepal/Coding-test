@@ -14,22 +14,22 @@ namespace Coding_test.Services
         {
             try
             {
-                //check if the upload Directory exists in webRootpath 
-                //if Do not exist create uploads Directory
+                // Check if the upload Directory exists in webRootpath. 
+                // If Do not exist create uploads Directory.
 
                 if (!Directory.Exists(_environment.WebRootPath + "\\uploads\\"))
                 {
                     Directory.CreateDirectory(_environment.WebRootPath + "\\uploads\\");
                 }
 
-                //Csv file path
+                // Csv file path.
                 string file = _environment.WebRootPath+"\\uploads\\Output.csv";
                 string separator = ",";
                 StringBuilder output = new StringBuilder();
 
-                //if the csv File exist in the file variable 
-                //if there is file Don't exist create them with heading 
-                //otherwise it will simply append the userdata
+                // If the csv File exist in the file variable. 
+                // If there is file Don't exist create them with heading. 
+                // Otherwise it will simply append the userdata.
 
                 if (!File.Exists(file))
                 {
@@ -52,23 +52,22 @@ namespace Coding_test.Services
                     File.AppendAllText(file, output.ToString());
                 } 
                 
-            } catch (Exception ex)
+            } catch 
 
             {
-                throw ex;
+                throw;
             }
 
 
         }
 
-        //This method is to get the data from csv file 
-        //and give the data to the controller class
-
+        // This method is to get the data from csv file. 
+        // And give the data to the controller class.
         public IEnumerable<UserDetail> GetData()
         {
             try
             {
-                //path of our csv file 
+                // Path of the csv file. 
                 var csvpath = _environment.WebRootPath + "\\uploads\\Output.csv";
                 List<UserDetail> Values = File.ReadAllLines(csvpath)
                     .Skip(1)
@@ -76,9 +75,9 @@ namespace Coding_test.Services
                     .ToList();
 
                 return Values;
-            }catch(Exception ex)
+            }catch
             {
-                throw ex;
+                throw;
             }
 
             
@@ -90,7 +89,7 @@ namespace Coding_test.Services
         {
             try
             {
-                //path of our csv file 
+                // Path of the csv file. 
                 var csvpath = _environment.WebRootPath + "\\uploads\\Output.csv";
                 List<UserDetail> Values = File.ReadAllLines(csvpath)
                     .Skip(1)
@@ -99,38 +98,40 @@ namespace Coding_test.Services
                 var user = Values.Where(x => x.Id == id).FirstOrDefault();
                 return user;
             }
-            catch (Exception ex)
+            catch 
             {
-                throw ex;
+                throw;
             }
         }
 
-       
 
-        // create a Methods that return UserDetail 
-        //each value are assign to the UserDetails model and return UserDetails objects
-        UserDetail FromCsv(string csvLine)
+
+        // Create a Methods that return UserDetail. 
+        // Each value are assign to the UserDetails model and return UserDetails objects.
+        static UserDetail FromCsv(string csvLine)
         {
             try
             {
                 string[] values = csvLine.Split(',');
-                UserDetail dailyValues = new UserDetail();
-                dailyValues.Id = Convert.ToInt32(values[0]);
-                dailyValues.Name = Convert.ToString(values[1]);
-                dailyValues.Gender = Convert.ToString(values[2]);
-                dailyValues.Phone = Convert.ToString(values[3]);
-                dailyValues.Email = Convert.ToString(values[4]);
-                dailyValues.Address = Convert.ToString(values[5]);
-                dailyValues.Nationality = Convert.ToString(values[6]);
-                dailyValues.DateOfBirth = Convert.ToDateTime(values[7]);
-                dailyValues.EducationBackground = Convert.ToString(values[8]);
-                dailyValues.PreferredModeOfContact = Convert.ToString(values[9]);
+                UserDetail UserValues = new()
+                {
+                    Id = Convert.ToInt32(values[0]),
+                    Name = Convert.ToString(values[1]),
+                    Gender = Convert.ToString(values[2]),
+                    Phone = Convert.ToString(values[3]),
+                    Email = Convert.ToString(values[4]),
+                    Address = Convert.ToString(values[5]),
+                    Nationality = Convert.ToString(values[6]),
+                    DateOfBirth = Convert.ToDateTime(values[7]),
+                    EducationBackground = Convert.ToString(values[8]),
+                    PreferredModeOfContact = Convert.ToString(values[9])
+                };
 
-                return dailyValues;
+                return UserValues;
             }
-            catch(Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
             
         }

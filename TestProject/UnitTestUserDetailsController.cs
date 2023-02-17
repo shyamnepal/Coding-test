@@ -5,6 +5,7 @@ using Coding_test.Services;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using System.Linq;
 using TestProject.IUserDetailsTest;
 
 namespace TestProject
@@ -22,12 +23,12 @@ namespace TestProject
         [Fact]
         public void TestIndexView()
         {
-            //Arrange
+            // Arrange
             var result = _controller.Index() as ViewResult;
-            //Act
+            // Act
             var ViewResult = Assert.IsType<ViewResult>(result);
 
-            //Assert
+            // Assert
             Assert.Equal("Index", ViewResult.ViewName);
 
         }
@@ -38,7 +39,7 @@ namespace TestProject
             // Arrange
             var result = _controller.UserView().Result;
 
-            //Act
+            // Act
             var okResult = result as OkObjectResult;
             
             // Assert
@@ -54,16 +55,16 @@ namespace TestProject
         [Fact]
         public async Task Add_Returnview_WhenModelStateIsInvalid()
         {
-            //Arrange
+            // Arrange
             _controller.ModelState.AddModelError("Name", "Required");
             var newUser = new UserDetail() { Email = "shyamnepal@gmail.com", Address = "ktm", DateOfBirth = DateTime.Now, Gender = "male", EducationBackground = "BIT", Nationality = "nepali", Phone = "9843117125", PreferredModeOfContact = "email" };
             
-            //Act
+            // Act
             var result = _controller.Create(newUser).Result;
             var okResult = result as ViewResult;
 
-            //Assert
-            var ViewResutl = Assert.IsType<ViewResult>(okResult);
+            // Assert
+            var viewResutl = Assert.IsType<ViewResult>(okResult);
             Assert.Equal("Index", okResult.ViewName);
             
         }
@@ -71,18 +72,40 @@ namespace TestProject
         [Fact]
         public async Task ModelSucess_Result()
         {
-            //Arrange 
+            // Arrange 
             var newUser = new UserDetail() { Name = "shyam", Email = "shyamnepal@gmail.com", Address = "ktm", DateOfBirth = DateTime.Now, Gender = "male", EducationBackground = "BIT", Nationality = "nepali", Phone = "9843117125", PreferredModeOfContact = "email" };
 
-            //Act
+            // Act
 
             var result = _controller.Create(newUser).Result;
-          var   OkResult = result as RedirectToActionResult;
+            var   okResult = result as RedirectToActionResult;
 
-            //Assert
-            var ViewResult = Assert.IsType<RedirectToActionResult>(OkResult);
-            Assert.Equal("UserView", ViewResult.ActionName);
+            // Assert
+            var viewResult = Assert.IsType<RedirectToActionResult>(okResult);
+            Assert.Equal("UserView", viewResult.ActionName);
 
+        }
+        [Fact]
+        public async Task Get_By_Id()
+        {
+            // Act
+
+            var result = _controller.Details(3).Result;
+            var okResult = result as ViewResult;
+            var user =(UserDetail) okResult.ViewData.Model;
+
+            // Assert
+            var viewResult = Assert.IsType<ViewResult>(okResult);
+            Assert.Equal("Details", viewResult.ViewName);
+            Assert.NotNull(viewResult);
+            Assert.Equal("check", user.Name);
+            
+            
+     
+            
+            
+            
+          
         }
 
         

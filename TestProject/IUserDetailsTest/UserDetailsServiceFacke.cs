@@ -1,5 +1,6 @@
 ﻿using Coding_test.Models;
 using Coding_test.Services;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,9 @@ namespace TestProject.IUserDetailsTest
         {
             _userDetails = new List<UserDetail>()
             {
-                new UserDetail(){ Name="shyam", Email="shyamnepal@gmail.com", Address="ktm",DateOfBirth=DateTime.Now,Gender= "male",EducationBackground="BIT", Nationality="nepali",Phone="9843117125", PreferredModeOfContact="email"},
-            new UserDetail() { Name = "rajeep", Email = "shyamnepal@gmail.com", Address = "ktm", DateOfBirth = DateTime.Now, Gender = "male", EducationBackground = "BIT", Nationality = "nepali", Phone = "9843117125", PreferredModeOfContact = "email" },
-                new UserDetail(){ Name="hari", Email="shyamnepal@gmail.com", Address="ktm",DateOfBirth=DateTime.Now,Gender= "male",EducationBackground="BIT", Nationality="nepali",Phone="9843117125", PreferredModeOfContact="email"}
+                new UserDetail(){Id=1, Name="shyam", Email="shyamnepal@gmail.com", Address="ktm",DateOfBirth=DateTime.Now,Gender= "male",EducationBackground="BIT", Nationality="nepali",Phone="9843117125", PreferredModeOfContact="email"},
+               new UserDetail() {Id=2, Name = "rajeep", Email = "shyamnepal@gmail.com", Address = "ktm", DateOfBirth = DateTime.Now, Gender = "male", EducationBackground = "BIT", Nationality = "nepali", Phone = "9843117125", PreferredModeOfContact = "email" },
+                new UserDetail(){Id=3, Name="check", Email="check@gmail.com", Address="ktm",DateOfBirth=DateTime.Now,Gender= "male",EducationBackground="BIT", Nationality="nepali",Phone="9843117125", PreferredModeOfContact="email"}
 
             };
         }
@@ -30,6 +31,12 @@ namespace TestProject.IUserDetailsTest
         public IEnumerable<UserDetail> GetData()
         {
             return _userDetails;
+        }
+
+        public dynamic GetUserById(int id)
+        {
+            var user = _userDetails.Where(x => x.Id == id).FirstOrDefault();
+            return user;
         }
     }
 }

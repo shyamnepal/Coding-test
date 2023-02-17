@@ -4,3 +4,8 @@ Id,Name,Gender,phone,Email,Address,Nationality,Date of Birth,Education Backgroun
 3,shyam nepal,Female,9843117125,shyamenpal595@gmail.com,ktm,Nepali,2/7/2023 12:00:00 AM,CSIT,none
 4,shyam nepal,Female,9843117125,shyamenpal595@gmail.com,ktm,Nepali,2/7/2023 12:00:00 AM,CSIT,none
 5,testing,Male,0987654323,newemail@gmail.com,newAddress,Indian,2/1/2023 12:00:00 AM,Arts,mail
+6,Sita,Female,9876543210,newemail@gmail.com,newAddress,American,1/17/1998 12:00:00 AM,Arts,phone
+7,test,Female,9876543210,test@gmail.com,KTM,Nepali,2/5/2023 12:00:00 AM,test,mail
+8,check,Female,1234567890,check@gmail.com,check,check,2/17/2023 12:00:00 AM,check,phone
+9,shyam,male,9843117125,shyamnepal@gmail.com,ktm,nepali,2/17/2023 3:39:10 PM,BIT,email
+10,shyam nepal,Male,9843117125,shyamenpal595@gmail.com,ktm,American,2/16/2023 12:00:00 AM,BIT,phone

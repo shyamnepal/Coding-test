@@ -20,19 +20,19 @@ var isValid8 = false;
 var isValid9 = false;
 
 
-//Today date 
+// Today date 
 var today = new Date().toISOString().split('T')[0];
 
-//when the page load then execute the function
-//and set the max date is today so that we can not select the future date
+// When the page load then execute the function
+// And set the max date is today so that we can not select the future date
 window.onload = (event) => {
     console.log("page loaded");
     document.getElementsByName("dateofBirth")[0].setAttribute('max', today);
 
 };
 
-// when our form submit this addEventLister is called 
-//and check our validation 
+// When our form submit this addEventLister is called 
+// and check our validation 
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -45,8 +45,8 @@ form.addEventListener('submit', e => {
   
 });
 
-//set Error function helps us to set the
-//error and show in the web page in client side 
+// Set Error function helps us to set the
+// error and show in the web page in client side 
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
@@ -56,8 +56,8 @@ const setError = (element, message) => {
     inputControl.classList.add('error');
     inputControl.classList.remove('success')
 }
-//setsuccess give the show the success 
-//it remove the error
+// Setsuccess give the show the success.
+// It remove the error
 const setSuccess = element => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -68,15 +68,15 @@ const setSuccess = element => {
 };
 
 
-//email validation 
+// Email validation 
 const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
-//phone number 10 digit number
+// Phone number 10 digit number
 const ph = /^\d{10}$/;
-//alphabet not show in phone number 
-//it is also for phone number validation 
+// Alphabet not show in phone number 
+// It is also for phone number validation 
 const letter = /^[A-Za-z]+$/;
     
 
@@ -91,8 +91,10 @@ const validateInputs = () => {
     const contactValue = contact.value.trim();
     const dateofBirthValue = dateofBirth.value.trim();
 
-    console.log(gender);
-    console.log(gender);
+  
+
+    // Checking every input fields is valid of not.
+    // All the condition is apply bellow. 
    
     if (nameValue === '') {
         isValid1 = false;
