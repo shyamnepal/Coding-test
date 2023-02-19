@@ -10,6 +10,9 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: install sdk
+          command: dotnet-install.sh
+      - run:
           name: Restore packages
           command: dotnet restore
 
