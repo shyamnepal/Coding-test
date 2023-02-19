@@ -1,10 +1,9 @@
+
 version: 2
-jobs:
+jobs: 
   build:
-    environment:
-      IMAGE_NAME: shyam595/codingtest
     docker:
-      - image: circleci/codingtest:dev
+      - image: shyam595/codingtest:latest
     steps:
       - checkout
       - setup_remote_docker
