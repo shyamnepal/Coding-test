@@ -1,5 +1,7 @@
 
-version: 2
+version: 2.1
+orbs:
+  dotnet: ngs/dotnet@0.0.2
 jobs: 
   build:
     docker:
