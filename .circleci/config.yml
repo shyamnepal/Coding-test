@@ -28,17 +28,17 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run.
+  my-workflow:
     jobs:
-      -build:
-        context:
-          - build-env-vars
-          -docker-hub-creds
-    jobs:
-      build:
-        docker:
-          -image:shyam595/codingtest
-          auth:
-            username:shyam595
-            password:dckr_pat_GFqYTPRobldpJ_12G2UXMgSv-MU
+      - build:
+          context:
+            - build-env-vars
+            - docker-hub-creds
+
+        jobs:
+          build:
+            docker:
+              - image: shyam595/codingtest:latest
+                auth:
+                  username: $shyam595  # can specify string literal values
+                  password: $dckr_pat_GFqYTPRobldpJ_12G2UXMgSv-MU
