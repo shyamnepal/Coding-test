@@ -5,7 +5,7 @@ It is the simple project that is develop in asp.net core mvc. In this projec use
 
 The form is fully validate for client side as well as server side so that there is no error if the form is invalid input or empty.
 
-I have also host this samll application on web server which link is give below:\
+I have also host this samll application on web server which link is given below:\
 [Click me ](http://codingtask.somee.com/)
 
 ## Documentation
