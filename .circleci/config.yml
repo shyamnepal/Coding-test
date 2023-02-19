@@ -6,8 +6,7 @@ jobs:
       - image: shyam595/codingtest:latest
     steps:
       - checkout
-      - setup_remote_docker:
-          version:20.10.14
+      - setup_remote_docker
       - run: |
-          docker login -u $shyam595 -p $dckr_pat_GFqYTPRobldpJ_12G2UXMgSv-MU
-          docker build -t $shyam595/codingtest:$latest .
+          docker login -u shyam595 -p dckr_pat_GFqYTPRobldpJ_12G2UXMgSv-MU
+          docker build -t shyam595/codingtest: latest .
