@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aVvlYrTuf6vwH+LMMmZSMkMJ4CRMlqU1wiz09OMW67Liiq4QItokCf2tOnD9rZxNGGITpGvczESukMPTA4V1Cw==",
+  "dgSpecHash": "U/kN9Fayz+UTBznROCQ2xC8xnfplnnFxT4xHZZat2owIsXrk/a+qU4plhHsTZww7KvQt35zlFKpEnm6ni2EGPg==",
   "success": true,
   "projectFilePath": "D:\\Core_C#\\Coding-test\\Coding-test\\Coding-test.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Shyam\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -8,7 +8,15 @@
 
 <div class="container">
     <form id="form" asp-action="Create">
-    <h1>Add User Details</h1>
+    
+         <h3 style="display: inline-block; margin:0px;">Add User Details</h3>
+<p class="float-end"><a  asp-action="UserView" class="btn btn-primary">Show User</a></p>
+      
+
+
+    
+   
+
     <div class="input-control">
         <label asp-for="Name" >Name</label>
         <input asp-for="Name" id="name" type="text"/>
@@ -90,5 +98,6 @@
 
 
      <button type="submit" asp-action="Create">Submit</button>
+     
     </form>
 </div>

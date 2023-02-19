@@ -1,5 +1,2 @@
-Name,Gender,phone,Email,Address,Nationality,Date of Birth,Education Background,Prefered Contact
-Shyam Sundar Nepal,Male,9843117125,shyamenpal595@gmail.com,Kathmandu,American,7/21/2000 12:00:00 AM,Bachelor Computing ,phone
-Krishna ,Male,9843678790,Krishna@gmail.com,Kathmandu,Nepali,6/16/2000 12:00:00 AM,CSIT,phone
-Hari Pandey,Male,9865456756,Hari56@gmail.com,Trishuli ,Nepali,6/16/1998 12:00:00 AM,Management ,mail
-Santosh Gajurel,Male,9845893467,santoshnepal45@gmail.com,Kathmandu,Nepali ,2/16/2000 12:00:00 AM,Bachelor in Computer Science ,none
+Id,Name,Gender,phone,Email,Address,Nationality,Date of Birth,Education Background,Prefered Contact
+1,shyam nepal,Male,9843117125,shyamenpal595@gmail.com,Kathmandu,Nepali,7/21/2003 12:00:00 AM,BIT,phone
