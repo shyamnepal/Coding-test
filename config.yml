@@ -31,4 +31,14 @@ workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - build-and-test
+      -build:
+        context:
+          - build-env-vars
+          -docker-hub-creds
+    jobs:
+      build:
+        docker:
+          -image:shyam595/codingtest
+          auth:
+            username:shyam595
+            password:dckr_pat_GFqYTPRobldpJ_12G2UXMgSv-MU
