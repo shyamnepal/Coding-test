@@ -38,7 +38,7 @@ workflows:
     jobs:
       build:
         docker:
-          -image:shyam595/codingtest
+          - image:shyam595/codingtest
           auth:
             username:shyam595
             password:dckr_pat_GFqYTPRobldpJ_12G2UXMgSv-MU
