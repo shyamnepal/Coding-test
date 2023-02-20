@@ -2,10 +2,21 @@ version: 2
   jobs:
     build:
     docker:
+<<<<<<< HEAD
       - image: mcr.microsoft.com/dotnet/core/sdk:2.2
+=======
+      - image: shyam595/codingtest:latest
+
+    environment:
+      DOCKER_BUILDKIT: 1
+      BUILDX_PLATFORMS: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/386,linux/arm/v7,linux/arm/v6      
+    # Add steps to the job
+    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+>>>>>>> a111b79dc8b8ba240b240f3b30d3ee81fa9319ba
     steps:
       - checkout
       - run:
+<<<<<<< HEAD
           name: Restore packages
           command: dotnet restore
       - run:
@@ -14,3 +25,18 @@ version: 2
       -run:
         name: Run App
         command: dotnet run
+=======
+          # Update this line with the directory that contains your tests project file
+          working_directory: ~/project/App.Tests
+          name: Run tests
+          command: |
+            docker run --rm shyam595/codingtest:latest .
+
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+workflows:
+  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+    # Inside the workflow, you define the jobs you want to run.
+    jobs:
+      - build-and-test
+>>>>>>> a111b79dc8b8ba240b240f3b30d3ee81fa9319ba
