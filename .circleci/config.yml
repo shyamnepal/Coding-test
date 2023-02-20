@@ -11,7 +11,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: install dotnet
-          command: pip install dotnet
+          command: sudo apt-get install -y dotnet-sdk-7.0
       - run:
           name: Restore packages
           command: dotnet restore
