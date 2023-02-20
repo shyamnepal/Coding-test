@@ -1,7 +1,7 @@
 
 version: 2.1
 orbs:
-  dotnet: ngs/dotnet@0.0.2
+  node: circleci/node@5.1.0
 jobs: 
   build:
     docker:
@@ -11,7 +11,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: install dotnet
-          command: sudo apt-get install -y dotnet-sdk-7.0
+          command: pip install dotnet
       - run:
           name: Restore packages
           command: dotnet restore
